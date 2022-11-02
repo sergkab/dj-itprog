@@ -1,2 +1,7 @@
 .idea/
 *.pyc
+Pipfile
+Pipfile.lock
+.venv
+.gitignore
+db.sqlite3

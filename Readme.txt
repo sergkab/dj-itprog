@@ -8,6 +8,8 @@ https://www.youtube.com/watch?v=FKrehdxbTOA&list=PLHV0sc9EnAAC7_U1tPuUsX6pdB_W8n
 
 # try django in venv
 
-2022 add app blog
+2022 11 03 add app blog
  branch add1app
+ add func test
+
 

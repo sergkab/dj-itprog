@@ -12,4 +12,5 @@ https://www.youtube.com/watch?v=FKrehdxbTOA&list=PLHV0sc9EnAAC7_U1tPuUsX6pdB_W8n
  branch add1app
  add func test
 
+2022 11 06 add table Article
 

@@ -8,6 +8,11 @@ https://www.youtube.com/watch?v=FKrehdxbTOA&list=PLHV0sc9EnAAC7_U1tPuUsX6pdB_W8n
 
 # try django in venv
 
+сформировал pipenv
+  pipenv install
+  pipenv shell
+  ./manage.py runserver
+
 2022 11 03 add app blog
  branch add1app
  add func test
@@ -17,5 +22,7 @@ https://www.youtube.com/watch?v=FKrehdxbTOA&list=PLHV0sc9EnAAC7_U1tPuUsX6pdB_W8n
   урок 6
   Заполнение таблицы через админку
   и добавление фото
+2022 11 15
+  сформировал Makefile, run: make up
 
 

@@ -2,13 +2,14 @@
  WebForMySelf
 https://www.youtube.com/watch?v=FKrehdxbTOA&list=PLHV0sc9EnAAC7_U1tPuUsX6pdB_W8n27u&index=10
 
+ADMINka login serg, passw 123   ****************
 
 Запуск:
     docker-compose up
 
 # try django in venv
 
-сформировал pipenv
+сформировал pipenv      ********************
   pipenv install
   pipenv shell
   ./manage.py runserver
@@ -24,5 +25,10 @@ https://www.youtube.com/watch?v=FKrehdxbTOA&list=PLHV0sc9EnAAC7_U1tPuUsX6pdB_W8n
   и добавление фото
 2022 11 15
   сформировал Makefile, run: make up
+2022 11 17
+  Вывод данных базы в template-e
+ветка Work221117
+
+
 
 

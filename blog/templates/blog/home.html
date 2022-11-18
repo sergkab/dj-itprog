@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Home </title>
+</head>
+<body>
+    <h2> Hellow, my 1st template </h2>
+    {% for post in posts %}
+        <h3> {{ post.title }}  </h3>
+        <div>
+            <img src="{{ post.photo.url }}" width = '100' alt = 'photo'>
+            {{ post.content }}
+        </div>
+        <p> {{ post.created_at }}</p>
+    {% endfor %}
+</body>
+</html>
+

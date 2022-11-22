@@ -11,7 +11,7 @@ build_nginx:
 	cat old_sites_archive/old_sites.tar.gz.* > old_sites_archive/old_sites.tar.gz && docker build -f Dockerfile.nginx -t belcanto_nginx .
 
 up:
-	docker-compose  -f docker-compose.yml up
+	docker-compose  -f docker-compose.yml up -d
 
 down:
 	docker-compose -f docker-compose.yml down

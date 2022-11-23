@@ -5,4 +5,6 @@ urlpatterns = [
     #path('admin/', admin.site.urls),
     path('', home),
     path('test/', test),
+    path('test/first', first),
 ]
+

@@ -28,7 +28,8 @@ ADMINka login serg, passw 123   ****************
 2022 11 17
   Вывод данных базы в template-e
 ветка Work221117
-
+2022 11 22
+  running psql by demon
 
 
 

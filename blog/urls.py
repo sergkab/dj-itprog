@@ -6,5 +6,6 @@ urlpatterns = [
     path('', home),
     path('test/', test),
     path('test/first', first),
+    path('readme/', readme),
 ]
 

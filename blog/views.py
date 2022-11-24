@@ -11,6 +11,13 @@ def test(request):
     return HttpResponse('<h2> Hello! I am Test 2022 11 06 </h2> <p> <h2> Test Page 05 after Amend  </h2> </p> ')
 
 def first(request):
-    return HttpResponse('<h2> Hello! I am Test/first 2022 11 22 </h2> <p> <h2> Test Page 06   </h2> </p> ')
+    #return HttpResponse('<h2> Hello! I am Test/first 2022 11 22 </h2> <p> <h2> Test Page 06   </h2> </p> ')
+    return render( request, 'blog/first.html' )
+
+def readme(request):
+    return render( request, 'blog/readme.html' )
+
+
+
 
 

@@ -14,6 +14,11 @@ ADMINka login serg, passw 123   ****************
   pipenv shell
   ./manage.py runserver
 
+2022 12 01
+ обработка параметра myparam
+  path('test/<myparam>', test),
+
+********* Далее записи идут  в другом порядке ( сначала старые )
 2022 11 03 add app blog
  branch add1app
  add func test

@@ -12,7 +12,7 @@ ADMINka login serg, passw 123   ****   serg02 atikin ************
 сформировал pipenv      ********************
   pipenv install
   pipenv shell
-  make up
+  make up  ( ./zapusk.sh )
   ./manage.py runserver
 
 2022 12 01

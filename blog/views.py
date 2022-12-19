@@ -3,10 +3,15 @@ from django.http import HttpResponse
 from .models import Article, Bogacha
 from django.conf import settings
 
+var_test = "vartest"
+
 # Create your views here.
 def home(request):
     posts = Article.objects.all()
-    return render( request, 'blog/home.html', { 'posts': posts } )
+    global var_test
+    var_test = "vartest_chg_in_home"
+    return render( request, 'blog/home.html', { 'posts': posts, 'var_test': var_test } )
+
 
 def test(request, myparam ):
     #return HttpResponse('<h2> Hello! I am Test 2022 11 06 </h2> <p> <h2> Test Page 05 after Amend  </h2> </p> ')
@@ -14,7 +19,8 @@ def test(request, myparam ):
     staturl = settings.STATIC_URL
     basdir = settings.BASE_DIR
     statroot = settings.STATIC_ROOT
-    context = { 'statdirs': statdirs, 'staturl': staturl, 'basdir': basdir, 'statroot': statroot, 'myparam': myparam }
+    #var_test = "vartest_chg_in_test"
+    context = { 'statdirs': statdirs, 'staturl': staturl, 'basdir': basdir, 'statroot': statroot, 'myparam': myparam, 'var_test': var_test}
     return render( request, 'blog/test.html', context )
 
 def first(request):
@@ -23,7 +29,6 @@ def first(request):
 
 def readme(request):
     return render( request, 'blog/readme.html' )
-
 
 
 

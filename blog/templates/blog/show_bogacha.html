@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <title> Show Bogacha </title>
+    <!--link type= "text/css" href="{% static 'blog/css/style.css?8' %}" rel="stylesheet"-->
+    <link href="/static/blog/css/style.css?8" rel="stylesheet">
+</head>
+<body>
+    <h2> Hellow, my bogacha </h2>
+    {% for post in posts %}
+        <h3> {{ post.name }}  </h3>
+        <div>
+            {{ post.mesto1 }}
+        </div>
+        <p> {{ post.mesto2 }}</p>
+    {% endfor %}
+    <p> <a href="readme"> readme  </a> </p>
+    <p> <a href="test/first"> test/first  </a> </p>
+    <p> vartest: {{ var_test }}  </p>
+</body>
+</html>
+
+

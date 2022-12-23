@@ -7,5 +7,6 @@ urlpatterns = [
     path('test/<myparam>', test),
     path('test/first', first),
     path('readme/', readme),
+    path('show_bogacha/', show_bogacha),
 ]
 

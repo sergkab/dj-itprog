@@ -30,6 +30,12 @@ def first(request):
 def readme(request):
     return render( request, 'blog/readme.html' )
 
+def show_bogacha(request):
+    posts = Bogacha.objects.all()
+    global var_test
+    var_test = " vartest_chg_in_show_bog "
+    return render( request, 'blog/show_bogacha.html', { 'posts': posts, 'var_test': var_test } )
+
 
 
 

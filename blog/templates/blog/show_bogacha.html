@@ -1,26 +1,50 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
     <meta charset="UTF-8">
     <title> Show Bogacha </title>
     <!--link type= "text/css" href="{% static 'blog/css/style.css?8' %}" rel="stylesheet"-->
-    <link href="/static/blog/css/style.css?8" rel="stylesheet">
+    <link href="/static/blog/css/style.css?10" rel="stylesheet">
 </head>
+
 <body>
-    <h2> Hellow, my bogacha </h2>
+    <h2 id="button"> Hellow, my bogacha </h2>
+    <p> Bogacha </p>
     {% for post in posts %}
-        <h3> {{ post.name }}  </h3>
-        <div>
-            {{ post.mesto1 }}
+        <div class="panel">
+            <div class="cell1_tab"> {{ post.name }}  </div>
+            <div class="cell_tab"> {{ post.mesto1 }}  </div>
+            <div class="cell_tab"> {{ post.mesto2 }} </div>
+            <hr>
         </div>
-        <p> {{ post.mesto2 }}</p>
     {% endfor %}
-    <p> <a href="readme"> readme  </a> </p>
-    <p> <a href="test/first"> test/first  </a> </p>
+    <hr>
+    <p> Bogacha mesto </p>
+    {% for postm in postsm %}
+        <div class="panel">
+            <div class="cell_tab"> {{ postm.mesto1 }}  </div>
+            <div class="cell_tab"> {{ postm.mesto2 }}  </div>
+            <hr>
+        </div>
+    {% endfor %}
+    <p> <a href="/readme"> readme  </a> </p>
+    <p> <a href="/test/first"> test/first  </a> </p>
     <p> vartest: {{ var_test }}  </p>
+    <script>
+        console.log ("my_script");
+        document.getElementById('button').addEventListener('click', printHello);
+
+        function printHello() {
+        fetch('http://localhost:9000/click_butt')
+          .then(data => console.log(data));
+        console.log ("my_click");
+        };
+    </script>
 </body>
+
 </html>
 
 

@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from .models import Article, Bogacha
+from .models import Article, Bogacha, Boga_Mesto
 from django.conf import settings
 
 var_test = "vartest"
@@ -32,10 +32,13 @@ def readme(request):
 
 def show_bogacha(request):
     posts = Bogacha.objects.all()
+    postsm = Boga_Mesto.objects.all()
     global var_test
     var_test = " vartest_chg_in_show_bog "
-    return render( request, 'blog/show_bogacha.html', { 'posts': posts, 'var_test': var_test } )
+    return render( request, 'blog/show_bogacha.html', { 'posts': posts, 'postsm': postsm, 'var_test': var_test } )
 
-
+def click_butt(request):
+    print ("click_button")
+    return HttpResponse( "Hello!" )
 
 

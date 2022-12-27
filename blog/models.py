@@ -12,3 +12,9 @@ class Bogacha(models.Model):
     mesto1 = models.CharField(max_length = 80)
     mesto2 = models.CharField(max_length = 80)
     #photo = models.ImageField(upload_to='photos/%Y/%m/%d')
+
+class Boga_Mesto(models.Model):
+    mesto1 = models.CharField(max_length = 80)
+    mesto2 = models.CharField(max_length = 80)
+
+

@@ -1,4 +1,20 @@
 body{
-  color: blue;
+  color: #222;
+}
+
+.panel{
+    display: flex;
+    background: #EEE;
+    padding: 2px;
+}
+
+.cell_tab{
+    min-width: 6rem;
+    margin: 4px;
+}
+
+.cell1_tab{
+    min-width: 140px;
+    margin: 4px;
 }
 

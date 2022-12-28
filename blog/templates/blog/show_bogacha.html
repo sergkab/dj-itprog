@@ -13,14 +13,17 @@
 <body>
     <h2 id="button"> Hellow, my bogacha </h2>
     <p> Bogacha </p>
+    <div id = "stakan">
     {% for post in posts %}
         <div class="panel">
-            <div class="cell1_tab"> {{ post.name }}  </div>
-            <div class="cell_tab"> {{ post.mesto1 }}  </div>
+            <div class="cell1_tab" id="nam{{ post.id }}"> {{ post.name }}  </div>
+            <div class="cell_tab" id="mes{{ post.id }}"> {{ post.mesto1 }}  </div>
             <div class="cell_tab"> {{ post.mesto2 }} </div>
+            <div> {{ post.id }} </div>
             <hr>
         </div>
     {% endfor %}
+    </div>
     <hr>
     <p> Bogacha mesto </p>
     {% for postm in postsm %}
@@ -37,12 +40,15 @@
         console.log ("my_script");
         document.getElementById('button').addEventListener('click', printHello);
 
+        myvar = 'mypar';
+
         function printHello() {
-        fetch('http://localhost:9000/click_butt')
+        fetch('http://localhost:9000/click_butt/'+myvar)
           .then(data => console.log(data));
         console.log ("my_click");
         };
     </script>
+    <script src="/static/blog/js/main.js"></script>
 </body>
 
 </html>

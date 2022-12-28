@@ -37,8 +37,8 @@ def show_bogacha(request):
     var_test = " vartest_chg_in_show_bog "
     return render( request, 'blog/show_bogacha.html', { 'posts': posts, 'postsm': postsm, 'var_test': var_test } )
 
-def click_butt(request):
-    print ("click_button")
+def click_butt(request, myparam):
+    print ("click_button", myparam)
     return HttpResponse( "Hello!" )
 
 

@@ -37,6 +37,17 @@ def show_bogacha(request):
     var_test = " vartest_chg_in_show_bog "
     return render( request, 'blog/show_bogacha.html', { 'posts': posts, 'postsm': postsm, 'var_test': var_test } )
 
+def before_show_mesto(request, myparam):
+    print ("before_show_mesto ", myparam)
+    show_mesto(request, myparam)
+    return HttpResponse( "Hello!" )
+
+def show_mesto(request, myparam):
+    #postsm = Boga_Mesto.objects.all()
+    postsm = Boga_Mesto.objects.filter(mesto1=myparam)
+    print ("mesto1 ", myparam)
+    return render( request, 'blog/show_mesto.html', { 'postsm': postsm } )
+
 def click_butt(request, myparam):
     print ("click_button", myparam)
     return HttpResponse( "Hello!" )

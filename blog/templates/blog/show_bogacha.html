@@ -12,6 +12,8 @@
 
 <body>
     <h2 id="button"> Hellow, my bogacha </h2>
+    <div id = "for_href"> name </div>
+    <div> <a href="obr_href/param" id = "my_href"> obr_href </a> </div>
     <p> Bogacha </p>
     <div id = "stakan">
     {% for post in posts %}
@@ -38,15 +40,8 @@
     <p> vartest: {{ var_test }}  </p>
     <script>
         console.log ("my_script");
-        document.getElementById('button').addEventListener('click', printHello);
+        //document.getElementById('button').addEventListener('click', printHello);
 
-        myvar = 'mypar';
-
-        function printHello() {
-        fetch('http://localhost:9000/click_butt/'+myvar)
-          .then(data => console.log(data));
-        console.log ("my_click");
-        };
     </script>
     <script src="/static/blog/js/main.js"></script>
 </body>

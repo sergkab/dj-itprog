@@ -31,8 +31,11 @@ def readme(request):
     return render( request, 'blog/readme.html' )
 
 def show_bogacha(request):
+    # spisok parts
     posts = Bogacha.objects.all()
+    # spisok mest
     postsm = Boga_Mesto.objects.all()
+    # for proverka global var
     global var_test
     var_test = " vartest_chg_in_show_bog "
     return render( request, 'blog/show_bogacha.html', { 'posts': posts, 'postsm': postsm, 'var_test': var_test } )

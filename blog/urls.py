@@ -11,5 +11,6 @@ urlpatterns = [
     path('click_butt/<myparam>', click_butt, ""),
     path('show_mesto/<myparam>', show_mesto, ""),
     path('before_show_mesto/<myparam>', before_show_mesto, ""),
+    path('index_good/', index_good),
 ]
 

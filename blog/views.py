@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from .models import Article, Bogacha, Boga_Mesto
+from .models import Article, Bogacha, Boga_Mesto, Category, Good
 from django.conf import settings
 
 var_test = "vartest"
@@ -55,4 +55,18 @@ def click_butt(request, myparam):
     print ("click_button", myparam)
     return HttpResponse( "Hello!" )
 
+def index_good(request):
+    cat_id = None
+    if cat_id == None:
+        cat = Category.objects.first()
+    else:
+        cat = Category.objects.get(pk = cat_id)
+    goods = Good.objects.filter(category = cat).order_by("name")
+    s = "Категория: " + cat.name + "<br><br>"
+    for good in goods:
+        s = s + "(" + str(good.pk) + ") " + good.name + "<br><br>"
+    return HttpResponse(s)
+
+def good(request):
+    return ""
 

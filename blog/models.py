@@ -8,10 +8,14 @@ class Article(models.Model):
     photo = models.ImageField(upload_to='photos/%Y/%m/%d')
 
 class Bogacha(models.Model):
-    name = models.CharField(max_length = 80)
+    name = models.CharField(max_length = 80, verbose_name = "Наим" )
     mesto1 = models.CharField(max_length = 80)
     mesto2 = models.CharField(max_length = 80)
     #photo = models.ImageField(upload_to='photos/%Y/%m/%d')
+
+    class Meta:
+        verbose_name = "Моя_Богача"
+        verbose_name_plural = "Моя_Богача"
 
 class Boga_Mesto(models.Model):
     mesto1 = models.CharField(max_length = 80)
